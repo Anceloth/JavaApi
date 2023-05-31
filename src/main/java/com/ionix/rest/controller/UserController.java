@@ -63,7 +63,7 @@ public class UserController {
 		}
     }
 
-    @PostMapping
+    @PostMapping("/create/")
     public User createUser(@Validated @RequestBody User user) {
         try {
         	LOG.debug("Creating user: ", user);
