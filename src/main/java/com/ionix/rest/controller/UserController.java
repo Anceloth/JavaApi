@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ionix.rest.core.entities.User;
@@ -64,6 +65,7 @@ public class UserController {
     }
 
     @PostMapping("/create/")
+    @ResponseStatus(reason = "CREATED")
     public User createUser(@Validated @RequestBody User user) {
         try {
         	LOG.debug("Creating user: ", user);
@@ -74,7 +76,8 @@ public class UserController {
         return null;
     }
     
-    @DeleteMapping("/delete/{id}")  
+    @DeleteMapping("/delete/{id}")
+    @ResponseStatus(reason = "DELETED")
     public void deleteUser(@PathVariable(value = "id") Long id) {
     	try {
 			deleteUserUsecase.ejecutar(id);
