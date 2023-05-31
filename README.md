@@ -12,6 +12,10 @@
 ### Run app
 
 3. Run app as an springboot app
+ 
+* At Start it must create the table user because the spring-hibernate implementation.
+* if not, you can execute the file `create.sql` at the root of project
+
 
 ### Get postman Collection 
 
