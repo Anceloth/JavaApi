@@ -75,7 +75,7 @@ public class UserController {
     }
     
     @DeleteMapping("/delete/{id}")  
-    public void deleteUser(Long id) {
+    public void deleteUser(@PathVariable(value = "id") Long id) {
     	try {
 			deleteUserUsecase.ejecutar(id);
 		} catch (Exception e) {

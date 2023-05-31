@@ -1,5 +1,6 @@
 package com.ionix.rest.core.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,9 +15,16 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
+	@Column(nullable = false)
 	private String name;
+	
+	@Column(name = "user_name", nullable = false)
 	private String userName;
+	
+	@Column(nullable = false)
 	private String email;
+	
+	@Column
 	private String phone;
 	
 	public User() {
