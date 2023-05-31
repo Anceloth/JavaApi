@@ -8,3 +8,13 @@
 
 1. In root folder execute `cd dockers/`
 2. Execute `docker-compose up -d`
+
+### Run app
+
+3. Run app as an springboot app
+
+### Get postman Collection 
+
+If you want to test it There is a postman collection with the calls to the API here:
+
+src/main/resources/PostmanCollection
