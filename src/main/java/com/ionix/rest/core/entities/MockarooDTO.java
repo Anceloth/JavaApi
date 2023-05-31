@@ -1,6 +1,5 @@
 package com.ionix.rest.core.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class MockarooDTO {
 	

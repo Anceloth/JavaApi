@@ -17,8 +17,6 @@ import com.ionix.rest.core.entities.MockarooDTO;
 import com.ionix.rest.core.usecases.CallMockarooApiUseCase;
 import com.ionix.rest.core.usecases.CodeParamUsingDESUseCase;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 @RestController
 @RequestMapping("/api/external")
@@ -42,11 +40,12 @@ public class MockarooController {
 	    	Optional<MockarooDTO> responseDTO;
 	    	String paramEncoded;
 	        try {
-	        	System.out.println("Encoding Param : "+ param);
+	        	// Cifrar param
 	        	LOG.debug("Encoding Param : "+ param); 	
 				paramEncoded = codeParamUsingDESUseCase.ejecutar(param);
 				LOG.debug("Param Encoded: "+ paramEncoded);
 				
+				// LLamar al API con el Param cifrado
 				CallMockarooApiDTO dataToSend = new CallMockarooApiDTO(mockarooUrl, paramEncoded, mockarooHeader); 
 				MockarooDTO response = callMockarooApiUseCase.ejecutar(dataToSend);				
 				responseDTO = Optional.of(response);

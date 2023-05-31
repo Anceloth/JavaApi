@@ -15,7 +15,7 @@ import com.ionix.rest.core.entities.ResultMockarooDTO;
 import com.ionix.rest.external.MockarooService;
 
 /**
- * Caso de uso que mapea la respuesta de la API Mackaroo a un objeto java,
+ * Caso de uso que mapea la respuesta de la API Mockaroo a un objeto java,
  * calcula numero de items obtenidos y extrae el tiempo de ejecucion en milisegundos
  * @author jonathan
  */

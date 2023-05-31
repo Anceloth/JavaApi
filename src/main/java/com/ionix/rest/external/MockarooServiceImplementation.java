@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.ionix.rest.core.entities.CallMockarooApiDTO;
-import com.ionix.rest.core.entities.MockarooDTO;
 
 @Service
 public class MockarooServiceImplementation implements MockarooService{

@@ -9,6 +9,10 @@ import javax.crypto.spec.DESKeySpec;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * Clase que se encarga de cifrar usando DES
+ * @author jonathan
+ */
 @Component
 public class CodeParamUsingDESUseCase implements UseCase<String, String>{
 
@@ -23,8 +27,6 @@ public class CodeParamUsingDESUseCase implements UseCase<String, String>{
 		
 		cipher.init(Cipher.ENCRYPT_MODE, ks);
 		byte[] bloque_cifrado = cipher.doFinal(cleartext);
-		
-		// String encryptedRut = new String(bloque_cifrado, "UTF8");
 		
 		String encryptedRut = Base64.getEncoder().encodeToString(bloque_cifrado);
 		return encryptedRut;
